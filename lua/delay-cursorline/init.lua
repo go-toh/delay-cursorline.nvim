@@ -11,6 +11,7 @@ local DEFAULT_OPTS = {
 	delay = {
 		enable = true,
 		time = 500,
+	}
 }
 
 local delay_cursorline = function()
@@ -29,7 +30,7 @@ local delay_cursorline = function()
 end
 
 function M.setup(user_opts)
-	opts = vim.tbl_deep_extend("force", DEFAULT_OPTS, user_opts)
+	opts = vim.tbl_deep_extend("force", DEFAULT_OPTS, user_opts or {})
 	if opts.delay.enable then
 		wo.cursorline = true
         prev_line = get_currentline(0)[1]
