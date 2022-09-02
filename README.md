@@ -19,14 +19,15 @@ require('delay-cursorline').setup()
 
 ```lua
 -- Default setting
+--
 -- delay = {
 --   enable = true,
 --   time = 500,
 -- }
 
-
 require('delay-cursorline').setup {
   delay = {
+    -- Set delay time.
     time = 1000,
   }
 }
